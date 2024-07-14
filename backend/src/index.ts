@@ -89,4 +89,8 @@ app.get('/api/v1/blog/:id', (c) => {
   return c.text("signup")
 })
 
+app.get('/api/v1/blog/bulk', (c) => {
+  return c.text("signup")
+})
+
 export default app

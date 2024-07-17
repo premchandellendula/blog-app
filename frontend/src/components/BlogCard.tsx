@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
 
 interface BlogCardInputs {
-    id: string;
-    authorName: string;
-    title: string;
-    content: string;
-    publishedDate: string
+    "id": string;
+    "authorName": string;
+    "title": string;
+    "content": string;
+    "publishedDate": string
 }
 
 export const BlogCard = ({id, authorName, title, content, publishedDate}: BlogCardInputs) => {
     return <Link to={`/blog/${id}`}>
-        <div className="border-b-2 border-gray-100 pb-3 p-3 max-w-screen-md cursor-pointer">
+        <div className="border-b-2 border-gray-100 pb-3 p-3 w-screen max-w-screen-md cursor-pointer">
             <div className="flex">
             <Avatar name={authorName} /> 
             <div className="font-extralight pl-2 text-sm flex flex-col justify-center">

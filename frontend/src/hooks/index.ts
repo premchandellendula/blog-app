@@ -2,13 +2,15 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import { BACKEND_URL } from "../config"
 
+interface Author {
+    name: string
+}
+
 export interface Blog {
-    content: string,
-    title: string,
-    id: string,
-    author: {
-        name: string
-    }
+    "title": string,
+    "content": string,
+    "id": string,
+    "author": Author
 }
 
 export const useBlog = ({id} : {id: string}) => {
@@ -21,7 +23,7 @@ export const useBlog = ({id} : {id: string}) => {
                 Authorization: localStorage.getItem("token")
             }
         })
-            .then((res) => {
+            .then(res => {
                 setBlog(res.data.blog)
                 setLoading(false)
             })
@@ -43,7 +45,7 @@ export const useBlogs = () => {
                 Authorization: localStorage.getItem("token")
             }
         })
-            .then((res) => {
+            .then(res => {
                 setBlogs(res.data.blogs)
                 setLoading(false)
             })

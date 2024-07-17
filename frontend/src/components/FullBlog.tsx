@@ -1,12 +1,16 @@
 import { Blog } from "../hooks"
 import { Appbar } from "./Appbar"
 
-export const FullBlog = ({blog}: {blog: Blog}) => {
+interface FullBlogProps {
+    blog: Blog
+}
+
+export const FullBlog = ({blog}: FullBlogProps) => {
     return <div>
         <Appbar />
         <div className="flex justify-center">
             <div className="grid grid-cols-12 px-10 w-full pt-200 max-w-screen-xl pt-12">
-                <div className="col-span-8 bg-red-500">
+                <div className="col-span-8">
                     <div className="text-3xl font-extrabold">
                         {blog.title}
                     </div>

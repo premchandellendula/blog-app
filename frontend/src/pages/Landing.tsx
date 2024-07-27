@@ -12,7 +12,7 @@ import { LandingAppbar } from "../components/LandingAppbar";
 import { LandingBlogs } from "../components/LandingBlogs";
 
 export const Landing = () => {
-    const [blogs, setBlogs] = useState([
+    const [blogs] = useState([
         {
             id: "1",
             authorName: "Prahladh",
